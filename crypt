@@ -1,0 +1,23 @@
+/* Header file to Encrypt/Decrypt a Binary/Text file */
+/* Date: 22/03/2022		Modified: 22/06/2022*/
+
+#ifndef _CRYPT_
+#define _CRYPT_
+
+#include<string>
+#include<iostream>
+using namespace std;
+
+enum Keyboard_Buffer {buf_off,buf_on};
+
+void method_none(int &);
+int int_input(string,int);
+string str_input(string,int);
+streampos filesize(const char *);
+int encrypt(const char *, const char *,
+			void (*)(int&),void (*)(int&));
+int decrypt(const char *, const char *,
+			void (*)(int&),void (*)(int&));
+
+#endif
+/* End CRYPT */
